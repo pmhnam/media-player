@@ -1,0 +1,158 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-wrapper {
+    flex: 3;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.controls {
+    flex: 1;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center;
+    padding: 20px;
+    background-color: #444;
+}
+
+.controls .btn {
+    margin: 5px; /* Reduced margin for buttons in a row */
+}
+
+.controls .btn-group {
+    display: flex;
+    flex-direction: row; /* Align buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+    width: 100%; /* Make sure the button group takes full width */
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 130px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.popup-content h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.close-btn {
+    background-color: #dc3545;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+
+
+.input-field {
+    width: calc(100% - 20px); /* Chiều rộng của trường nhập liệu bằng 100% - padding của popup */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Đảm bảo padding và border không làm trường nhập liệu dài thêm */
+}
+
+
+.video-list {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.video-list h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.video-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-list li {
+    color: #fff;
+    margin: 5px 0;
+    word-break: break-all; /* Ensure long URLs are properly wrapped */
+}
+
+.video-list a {
+    color: #00f;
+    text-decoration: none;
+}
+
+.video-list a:hover {
+    text-decoration: underline;
+}
+

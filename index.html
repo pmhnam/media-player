@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="video-wrapper">
+            <video id="video" controls></video>
+        </div>
+        <div class="controls">
+            <div class="btn-group">
+                <button id="loadVideoBtn" class="btn">Load Video</button>
+                <button id="addSubtitleBtn" class="btn">Add Subtitle</button>
+            </div>
+            <div id="videoList" class="video-list">
+                <h3>Saved Video Links</h3>
+                <ul id="videoListItems"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Video Popup -->
+    <div id="loadVideoPopup" class="popup">
+        <div class="popup-content">
+            <h2>Enter Video URL</h2>
+            <input type="text" id="videoUrl" placeholder="Enter .m3u8 URL" class="input-field">
+            <button id="loadVideoSubmit" class="btn">Load Video</button>
+            <button id="closeLoadVideoPopup" class="btn close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Add Subtitle Popup -->
+    <div id="addSubtitlePopup" class="popup">
+        <div class="popup-content">
+            <h2>Enter Subtitle URL</h2>
+            <input type="text" id="subtitleUrl" placeholder="Enter Subtitle URL" class="input-field">
+            <button id="addSubtitleSubmit" class="btn">Add Subtitle</button>
+            <button id="closeAddSubtitlePopup" class="btn close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Confirm Save Video Popup -->
+    <div id="confirmSaveVideoPopup" class="popup">
+        <div class="popup-content">
+            <h2>Do you want to save this video?</h2>
+            <button id="confirmSaveYes" class="btn">Yes</button>
+            <button id="confirmSaveNo" class="btn">No</button>
+        </div>
+    </div>
+
+
+    <!-- Enter Title Popup -->
+    <div id="enterTitlePopup" class="popup">
+        <div class="popup-content">
+            <h2>Enter Video Title</h2>
+            <input type="text" id="videoTitle" placeholder="Enter video title" class="input-field">
+            <button id="saveVideoWithTitle" class="btn">Save Video</button>
+            <button id="closeEnterTitlePopup" class="btn close-btn">Close</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
